@@ -1,7 +1,10 @@
 package ro.mycode.managemovie;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import ro.mycode.managemovie.service.MovieService;
 
 @SpringBootApplication
 public class ManageMovieApplication {
@@ -10,4 +13,16 @@ public class ManageMovieApplication {
 		SpringApplication.run(ManageMovieApplication.class, args);
 	}
 
+
+	@Bean
+	CommandLineRunner commandLineRunner(MovieService movieService){
+		return  args->{
+
+
+
+			movieService.getAllCars().forEach(System.out::println);
+
+		};
+
+	}
 }
