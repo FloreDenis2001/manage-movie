@@ -20,7 +20,7 @@ public class ManageMovieApplication {
 
 
 
-			movieService.getAllCars().forEach(System.out::println);
+			movieService.getAllMovies().forEach(System.out::println);
 
 		};
 
